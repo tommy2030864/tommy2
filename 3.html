@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>♥ (love caluclator)♥</title>
+
+  </head>
+
+  <body>
+    <script>
+      if (!confirm("هل تريد دخول صفحة تومي ؟"))
+      window.location=history.go(-1)
+      </script>
+
+    <div class="wrapper">
+
+      <div class="heading">
+
+        <h1>♥ (love caluclator)♥</h1>
+
+    <h3>♥*تصميم المبرمج *حاتم رمضان*♥</h3>
+
+      </div>
+
+
+      <div class="maincontent">
+
+        <div>
+
+          <!-- Your name Inputfield -->
+
+          <label for="yourname">*Your Name</label><br />
+
+          <input
+
+            type="text"
+
+            id="yourname"
+
+            placeholder="Enter Your Name"
+
+            spellcheck="false"
+
+            maxlength="30"
+
+            required
+
+          />
+
+        </div>
+
+        <div>
+
+          <!-- His/Her name Inputfield -->
+
+          <label for="theirname">*His/Her Name</label><br />
+
+          <input
+
+            type="text"
+
+            id="theirname"
+
+            placeholder="Enter His/Her Name"
+
+            spellcheck="false"
+
+            maxlength="30"
+
+            required
+
+          />
+
+        </div>
+
+      </div>
+
+      <button type="submit">❤ CALCULATE ❤</button>
+
+
+      <div class="result">
+
+        <h2>Result</h2>
+
+        <div class="divider"></div>
+
+        <p id="yourlovescoreis"></p>
+
+        <h1 id="score"></h1>
+
+        <p id="loveinfo"></p>
+
+        <p
+
+          id="reload"
+
+          style="
+
+            cursor: pointer;
+
+            display: none;
+
+            margin-top: 30px;
+
+            font-weight: 700;
+
+          "
+
+          onClick="window.location.reload();"
+
+        >
+
+          ↺ Re Calculate
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+
+      <p style="color: #000">
+
+      Enjoy <span style="color: #ff4136; font-size: 25px">❤</span>
+
+        <br />
+
+        <small>*Fun Purpose Only</small>
+
+      </p>
+
+    </div>
+
+
+    <script type="text/javascript"></script>
+
+
+    <script src="app.js"></script>
+
+
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,600&display=swap");
+
+@font-face {
+
+  font-family: "Cocogoose";
+
+  src: url("Cocogoose.ttf") format("truetype");
+
+}
+
+
+* {
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+body {
+
+  min-height: 100%;
+
+  background: #ff4136;
+
+  background: -moz-linear-gradient(
+
+    45deg,
+
+    #ff4136 50%,
+
+    #ff7376 100%
+
+  ); /* FF3.6-15 */
+
+  background: -webkit-linear-gradient(
+
+    45deg,
+
+    #ff4136 50%,
+
+    #ff7376 100%
+
+  ); /* Chrome10-25,Safari5.1-6 */
+
+  background: linear-gradient(
+
+    45deg,
+
+    #ff4136 50%,
+
+    #ff7376 100%
+
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#87e0fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  background-repeat: no-repeat;
+
+  font-family: "Montserrat", sans-serif;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  transition: 0.3s;
+
+  font-size: 18px;
+
+}
+
+
+h1 {
+
+  color: #fff;
+
+  font-size: 4rem;
+
+  font-family: "Cocogoose";
+
+}
+
+
+/* Wrapper Section */
+
+
+.wrapper {
+
+  height: 100%;
+
+  color: #fff;
+
+  padding: 50px;
+
+}
+
+
+.maincontent {
+
+  display: flex;
+
+  margin: 100px auto 20px auto;
+
+  text-align: center;
+
+  flex-flow: row;
+
+  justify-content: center;
+
+}
+
+
+label {
+
+  font-weight: 600;
+
+}
+
+
+.maincontent input {
+
+  width: 350px;
+
+  height: 50px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  outline: none;
+
+  padding: 20px;
+
+  font-size: 20px;
+
+  justify-content: space-between;
+
+  margin: 10px;
+
+  text-align: center;
+
+  text-transform: capitalize;
+
+  box-shadow: 0 10px 23px 10px #00000020;
+
+}
+
+
+.maincontent input:focus {
+
+  width: 450px;
+
+  background-color: #fff;
+
+  color: #ff4136;
+
+  transition: 0.3s;
+
+  font-weight: 700;
+
+}
+
+
+.maincontent input:valid {
+
+  background-color: #fff;
+
+  color: #ff4136;
+
+  transition: 0.3s;
+
+  font-weight: 700;
+
+}
+
+
+::placeholder {
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 18px;
+
+  text-align: center;
+
+}
+
+
+button {
+
+  background-color: #ffffff;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50px;
+
+  color: #ff4136;
+
+  padding: 15px 30px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: 0.3s;
+
+  font-weight: 600;
+
+  box-shadow: 0 10px 23px 10px #00000020;
+
+}
+
+button:hover {
+
+  background-color: transparent;
+
+  border: 2px solid #ffffff;
+
+  color: #ffffff;
+
+}
+
+
+.result {
+
+  width: 50%;
+
+  margin: 100px auto;
+
+}
+
+
+.result h1 {
+
+  font-family: "Montserrat", sans-serif;
+
+  padding: 10px;
+
+}
+
+.divider {
+
+  width: 200px;
+
+  height: 2px;
+
+  background-color: #fff;
+
+  text-align: center;
+
+  margin: 10px auto;
+
+}
+
+
+#loveinfo {
+
+  line-height: 1.5;
+
+}
+
+/* End of wrapper section */
+
+
+.footer {
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  padding: 20px;
+
+}
+
+
+/* Responsive Codes */
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+
+  body {
+
+    font-size: 16px;
+
+  }
+
+  .wrapper {
+
+    padding: 50px 10px;
+
+  }
+
+  h1 {
+
+    font-size: 1.5rem;
+
+  }
+
+  .maincontent {
+
+    margin: 50px auto 20px auto;
+
+    display: grid;
+
+  }
+
+  .maincontent input {
+
+    margin: 20px 0;
+
+    width: 90%;
+
+    height: 30px;
+
+  }
+
+
+  .maincontent input:focus {
+
+    width: 100%;
+
+  }
+
+
+  button {
+
+    font-size: 16px;
+
+    padding: 15px 5%;
+
+  }
+
+
+  .result {
+
+    width: 90%;
+
+    margin: 100px auto;
+
+  }
+
+
+  .divider {
+
+    width: 30%;
+
+  }
+
+
+  #score {
+
+    font-size: 2rem;
+
+  }
+
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .wrapper {
+
+    padding: 50px 10px;
+
+  }
+
+  h1 {
+
+    font-size: 2rem;
+
+  }
+
+
+  .maincontent {
+
+    margin: 50px auto 20px auto;
+
+    display: grid;
+
+  }
+
+  .maincontent input {
+
+    margin: 20px 0;
+
+    height: 30px;
+
+  }
+
+
+  button {
+
+    font-size: 16px;
+
+    padding: 15px 5%;
+
+  }
+
+
+  .result {
+
+    width: 90%;
+
+    margin: 100px auto;
+
+  }
+
+
+  .divider {
+
+    width: 30%;
+
+  }
+
+
+  #score {
+
+    font-size: 2rem;
+
+  }
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  .wrapper {
+
+    padding: 50px 10px;
+
+  }
+
+  h1 {
+
+    font-size: 3rem;
+
+  }
+
+
+  .maincontent {
+
+    display: flex;
+
+  }
+
+  .maincontent input {
+
+    width: 300px;
+
+    margin: 20px;
+
+  }
+
+
+  .maincontent input:focus {
+
+    width: 350px;
+
+  }
+
+
+  button {
+
+    padding: 15px 5%;
+
+  }
+
+
+  .result {
+
+    width: 90%;
+
+    margin: 100px auto;
+
+  }
+
+
+  .divider {
+
+    width: 30%;
+
+  }
+
+
+  #score {
+
+    font-size: 2rem;
+
+  }
+
+}
+
+
+</style>
+
+<script>
+
+
+/*=============================
+
+    Made With ♥ By Al Nahian
+
+  ============================*/
+
+// Start Code
+
+// 05 Sep July 2020
+
+// Al Nahian | https://alnahian.xyz
+
+
+// global variables
+
+var yourName = document.getElementById("yourname"),
+
+  theirName = document.getElementById("theirname"),
+
+  calcBtn = document.querySelector("button"),
+
+  yourlovescoreis = document.getElementById("yourlovescoreis"),
+
+  loveScore = Math.random() * 100,
+
+  loveInfo = document.getElementById("loveinfo"),
+
+  reloadBtn = document.getElementById("reload");
+
+loveScore = Math.floor(loveScore) + 1;
+
+
+//capitalize input values
+
+function capitalize_Words(str) {
+
+  return str.replace(/\w\S*/g, function (txt) {
+
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+
+  });
+
+}
+
+
+// Love Score Counter
+
+function love() {
+
+  function sleep(ms) {
+
+    return new Promise((resolve) => setTimeout(resolve, ms));
+
+  }
+
+  (async function () {
+
+    var i = 0;
+
+    while (i < loveScore) {
+
+      document.getElementById("score").innerHTML = i + "%";
+
+      await sleep(20);
+
+      i++;
+
+    }
+
+  })();
+
+}
+
+
+// Add eventlistener to button
+
+calcBtn.addEventListener("click", function (e) {
+
+  loveScore = Math.random() * 100; //delete this line if you want to keep the same value in the same session.
+
+  e.preventDefault();
+
+  if (yourName.value == "" && theirName.value == "") {
+
+    alert("You can't leave fields empty");
+
+  }
+
+  if (yourName.value == "") {
+
+    alert("Please Enter Your Name");
+
+  }
+
+  if (theirName.value == "") {
+
+    alert("Please Enter His/Her Name");
+
+  }
+
+
+  //lovescore conditions
+
+  else if (loveScore <= 10) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like Oil & Water. I'm sorry, but this is not enough for a perfect relationship.";
+
+  } else if (loveScore <= 20) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like Bird & Sky. But need to put a little concentration on your love.";
+
+  } else if (loveScore <= 30) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like Soil & Seed. You should take care of your love more! ";
+
+  } else if (loveScore <= 40) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like Romeo & Juliet. There is no fake things in your love. Go Ahead!";
+
+  } else if (loveScore <= 50) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like Marie & Pierre Curie. That's a good combination. You are a good example of true love.";
+
+  } else if (loveScore <= 60) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like The Earth & The Moon. You cannot live without each other.";
+
+  } else if (loveScore <= 70) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like River & Sea. Spread Love, not Hate.";
+
+  } else if (loveScore <= 80) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like glue. Nothing can seperate you from each other. Love is Forever.";
+
+  } else if (loveScore <= 90) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other more than anything in the world! You are the best example of true love.";
+
+  } else if (loveScore <= 100) {
+
+    yourlovescoreis.innerHTML = "Your Love Score is";
+
+    love();
+
+    reloadBtn.style.display = "block";
+
+    loveInfo.innerHTML =
+
+      "<b>You</b> and " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " love each other like Ertuğrul Gazi & Halime Sultan. You should get married with " +
+
+      "<b>" +
+
+      capitalize_Words(theirName.value) +
+
+      "</b>" +
+
+      " very soon. Best of Luck!";
+
+  }
+
+});
+
+
+</script>
+
+
+  </body>
+
+</html>
